@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f 0%, #4a4a6a 100%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.clock-container {
+  max-width: 450px;
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.clock-display {
+  font-size: 4.5rem;
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 30px;
+  color: #00d2ff;
+  text-shadow: 0 0 20px rgba(0, 210, 255, 0.5);
+  letter-spacing: 2px;
+}
+
+.alarm-controls {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+input[type="time"] {
+  font-size: 1.2rem;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+input[type="time"]:focus {
+  transform: scale(1.05);
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#setAlarmBtn {
+  background: linear-gradient(to right, #00d2ff, #3a7bd5);
+  color: white;
+  width: 100%;
+}
+
+#snoozeBtn {
+  background: #f0ad4e;
+  color: white;
+}
+
+#stopBtn {
+  background: #ff4b2b;
+  color: white;
+}
+
+.status-message {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.alert-area {
+  padding: 20px;
+  background: rgba(255, 75, 43, 0.2);
+  border: 1px solid rgba(255, 75, 43, 0.5);
+  border-radius: 20px;
+  animation: flash 0.8s infinite alternate;
+}
+
+.wake-up-text {
+  color: #ff4b2b;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@keyframes flash {
+  from {
+    background-color: rgba(255, 75, 43, 0.2);
+    box-shadow: 0 0 10px rgba(255, 75, 43, 0.1);
+  }
+  to {
+    background-color: rgba(255, 75, 43, 0.5);
+    box-shadow: 0 0 20px rgba(255, 75, 43, 0.4);
+  }
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="alarm-clock">
+      <div class="clock-container">
+        <div id="clockDisplay" class="clock-display">00:00:00</div>
+
+        <div class="alarm-controls">
+          <label for="alarmInput">Set Alarm:</label>
+          <input type="time" id="alarmInput" />
+          <button id="setAlarmBtn">Set</button>
+        </div>
+        <div id="alarmStatus" class="status-message">Alarm not set</div>
+
+        <div id="alertArea" class="alert-area" style="display: none">
+          <h2 class="wake-up-text">Wake up! ⏰</h2>
+          <button id="snoozeBtn" class="snooze-btn">Snooze (2 Min)</button>
+          <button id="stopBtn" class="stop-btn">Stop</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
